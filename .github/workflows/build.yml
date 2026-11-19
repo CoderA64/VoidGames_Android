@@ -25,12 +25,12 @@ jobs:
           if [ ! -f "./gradlew" ]; then
             mkdir -p gradle/wrapper
             cat << 'EOF' > gradle/wrapper/gradle-wrapper.properties
-          distributionBase=GRADLE_USER_HOME
-          distributionPath=wrapper/dists
-          distributionUrl=https\://services.gradle.org/distributions/gradle-8.2-bin.zip
-          zipStoreBase=GRADLE_USER_HOME
-          zipStorePath=wrapper/dists
-          EOF
+            distributionBase=GRADLE_USER_HOME
+            distributionPath=wrapper/dists
+            distributionUrl=https\://services.gradle.org/distributions/gradle-8.2-bin.zip
+            zipStoreBase=GRADLE_USER_HOME
+            zipStorePath=wrapper/dists
+            EOF
             gradle wrapper --gradle-version 8.2
           fi
           chmod +x gradlew
@@ -42,5 +42,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: VoidGames-APK
-          path: app/build/outputs/apk/debug/app-d
-          ebug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          
